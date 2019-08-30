@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Table</title>
+  <link rel="shortcut icon" href="images/ress.ico" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cbase.css">
+  <style>
+  #btable td
+  {
+   	padding-top: 0px;
+    padding-right: 30px;
+    padding-bottom: 0px;
+    padding-left: 30px;
+  }
+  #btable
+  {
+    height: 187px;
+    width: 583px;
+    position: absolute;
+    top: 261px;
+    left: 406px;
+    border: 1px black solid;
+    border-radius: 20px;
+    background: black;
+    opacity: 0.75;
+  }
+  body
+  {
+  background-image: url("images/restaurant-table.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height : 500px;
+  }
+  p
+  {
+  	color: #17ff1e;
+    font-size: 33px;
+    font-family: initial;
+  }
+  #datetext
+  {
+  	position: absolute;
+    top: 126px;
+    left: 150px;
+  }
+  #datepicker
+  {
+  	position: absolute;
+    top: 126px;
+    left: 260px;
+    font-size : 20px;
+    width : 254px;
+    border-radius: 7px;
+    height: 35px;
+    text-align: right;
+    padding: 10px;
+    background: transparent;
+    font-weight: bold;
+    color : #e9e9ea;
+    font-family: cursive;
+  }
+  #timetext
+  {
+  	position: absolute;
+    top: 126px;
+    left: 570px;
+  }
+  #timepicker
+  {
+  	position: absolute;
+    top: 126px;
+    left: 700px;
+    font-size: 20px;
+    color: #e9e9ea;
+    background: transparent;
+    border-radius: 7px;
+    width: 216px;
+    padding-top: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    font-weight: bold;
+  }
+  #avail
+  {
+  	position: absolute;
+    top: 126px;
+    left: 1080px;
+    background: #3486c1;
+    font-size: 20px;
+    color: white;
+    border-radius: 32px;
+    width:211px;
+    height: 42px;
+    border: 1px black;
+    font-family: inherit;
+    opacity: 0.98;
+  }
+  option
+  {
+  background : #eaeae1;
+  opacity: 0.6;
+  text-align: center;
+  color: black;
+  
+  }
+  #book
+  {
+  	position: absolute;
+    bottom: 43px;
+    left: 683px;
+    background: #3486c1;
+    font-size: 25px;
+    color: white;
+    border-radius: 32px;
+    width: 217px;
+    height: 42px;
+    border: 1px black;
+    font-family: inherit;
+    opacity: 0.98;
+  }
+  #shores
+  {
+  	position: absolute;
+    bottom: 148px;
+    left: 640px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #0d1fef;
+    
+  }
+  
+  #fnametext
+  {
+    position: absolute;
+    top: 60px;
+    left: 37px;
+  }
+  #lnametext
+  {
+    position: absolute;
+    top: 95px;
+    left: 37px;
+  }
+  #emailtext
+  {
+    position: absolute;
+    top: 130px;
+    left: 37px;
+  }
+  #mobtext
+  {
+    position: absolute;
+    top: 165px;
+    left: 37px;
+  }
+  #pintext
+  {
+    position: absolute;
+    top: 200px;
+    left: 37px;
+  }
+  #aadhartext
+  {
+    position: absolute;
+    top: 235px;
+    left: 37px;
+  }
+  #fname
+  {
+  position: absolute;
+    top: 60px;
+    left: 227px;
+  }
+  #lname
+  {
+    position: absolute;
+    top: 95px;
+    left: 227px;
+  }
+  #email
+  {
+    position: absolute;
+    top: 130px;
+    left: 227px;
+  }
+  #mob
+  {
+    position: absolute;
+    top: 165px;
+    left: 227px;
+  }
+  #pin
+  {
+    position: absolute;
+    top: 200px;
+    left: 227px;
+  }
+  #aadhar
+  {
+    position: absolute;
+    top: 235px;
+    left: 227px;
+  }
+  #reg
+  {
+  	position: absolute;
+	top: 306px;
+    left: 138px;
+    background: #3486c1;
+    font-size: 20px;
+    color: white;
+    border-radius: 32px;
+    width:211px;
+    height: 42px;
+    border: 1px black;
+    font-family: inherit;
+    opacity: 1;
+  }
+  
+  #regtable {
+    height: 371px;
+    width: 482px;
+    position: absolute;
+    top: 204px;
+    left: 540px;
+    border: 1px black solid;
+    border-radius: 20px;
+    background: black;
+    opacity: 0.75;
+}
+#titl
+  {
+  	position: absolute;
+    top: 28px;
+    left: 505px;
+    font-size: 60px;
+    color: coral;
+    font-family: initial;
+  }
+  #adtab th
+  {
+  color: cornsilk;
+    font-size: 16px;
+  }
+  #adtab
+  {
+  
+  height: 187px;
+    width: 760px;
+    position: absolute;
+    top: 261px;
+    left: 406px;
+       color: chartreuse;
+       text-align : center;
+    border-radius: 20px;
+    background: black;
+    opacity: 0.75;c
+  }
+  #adinp
+  {
+      position: absolute;
+    top: 291px;
+    left: 547px;
+  }
+  #adpass
+  {
+    position: absolute;
+    top: 42px;
+  }
+  #adsub
+  {
+      position: absolute;
+    top: 88px;
+    left: 59px;
+  }
+  #admin
+{
+	position: absolute;
+    top: 10px;
+    right: 55px;
+        background: #3486c1;
+    font-size: 20px;
+    color: white;
+    border-radius: 32px;
+    width: 140px;
+    height: 42px;
+    border: 1px black;
+    font-family: inherit;
+    opacity: 0.98;
+
+}
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/blockui.js"></script>
+  
+  <script>
+  
+  var sel=new Array();
+  
+  $( function() {
+
+	  
+	  
+	  
+	  $(document).ajaxStart(function(){
+		  
+		  
+			$.blockUI({
+
+				message : "loading"})
+		}).ajaxStop($.unblockUI);
+	  
+	  clr();
+	  var day=new Date();
+	  var nextDay = new Date(day);
+	  nextDay.setDate(day.getDate()+1);
+	  console.log(nextDay); 
+    $( "#datepicker" ).datepicker();
+    $( "#datepicker" ).datepicker( "option", "dateFormat","dd-M-yy");
+    $( "#datepicker" ).datepicker( "option", "showAnim","drop");
+    $( "#datepicker" ).datepicker( "option", "minDate",nextDay);
+    $('#book').click(function(){
+       var d=new Date();
+       var dd=d.getDate();
+       var mm=d.getMonth()+1;
+       var yyyy=d.getFullYear();
+       var datestr=dd+"/0"+mm+"/"+yyyy;
+       var cdate=new Date(datestr);
+       console.log(cdate);
+       var sdate = $('#datepicker').val();
+       console.log(sdate);
+       
+    });
+    
+    $('#avail').click(function(){
+    	
+    	avail();
+    	
+    });
+    
+    
+    $('#book').click(function(){
+    	
+    	
+    	$("#regpage").show();
+  	  $("#bookpage").hide();
+    	
+    	
+    	/*
+    	var date=$( "#datepicker" ).val();
+    	var time=$( "#timepicker").val();
+    	var x="insert into book_table(book_date,start_time,table_number)";
+    	for(i=0;i<sel.length-1;i++)
+    		x+=" select '"+date+"',"+time+","+sel[i]+" from dual union all";
+  			
+    	x+=" select '"+date+"',"+time+","+sel[i]+" from dual";
+    
+    	console.log(x);
+		$.ajax({
+		
+    		 url: "BOOKTABLE",
+    			type: "Post",
+    			data : {
+    				x : x
+    			},
+    			dataType :'json',
+    			complete : 
+    				function(result){
+    				alert('Congratulation!!!!\n\n\nYou have booked successfully');
+    				clr();
+    				
+    			}
+		});
+     
+		*/
+    });
+    
+    
+    $( "#datepicker" ).change(function(){
+    	clr();
+    });
+    
+    $( "#timepicker" ).change(function(){
+    	clr();
+    });
+    
+    $("#reg").click(function(){
+    	if($("#fname").val()==""||$("#lname").val()==""||$("#email").val()==""||$("#mob").val()==""||$("#pin").val()==""||$("#aadhar").val()=="")
+    		{
+    		alert("All feilds mandatory!!!");
+    		}
+    	else
+    		{
+    		var date=$( "#datepicker" ).val();
+        	var time=$( "#timepicker").val();
+        	var fname=$( "#fname").val();
+        	var lname=$( "#lname").val();
+        	var email=$( "#email").val();
+        	var mob=$( "#mob").val();
+        	var pin=$( "#pin").val();
+        	var aadhar=$( "#aadhar").val();
+        	var x="insert into book_table(book_date,start_time,table_number,fname,lname,email,mob,pin,aadhar)";
+        	for(i=0;i<sel.length-1;i++)
+        		x+=" select '"+date+"',"+time+","+sel[i]+",'"+fname+"','"+lname+"','"+email+"',"+mob+","+pin+","+aadhar+" from dual union all";
+      			
+        	x+=" select '"+date+"',"+time+","+sel[i]+",'"+fname+"','"+lname+"','"+email+"',"+mob+","+pin+","+aadhar+" from dual";
+        
+        	console.log(x);
+    		$.ajax({
+    		
+        		 url: "BOOKTABLE",
+        			type: "Post",
+        			data : {
+        				x : x
+        			},
+        			dataType :'json',
+        			complete : 
+        				function(result){
+        				alert('Congratulation!!!!\n\n\nYou have booked successfully');
+        				clr();
+        				
+        			}
+    		});
+    		
+    		}
+    });
+    
+    
+    
+    $('#addiv').hide();
+	$('#admin').click(function(){
+		$('#bookpage').hide();
+		$('#regpage').hide();
+		$('#addiv').show();
+		$('#adtab').hide();
+		$('#admin').hide();
+	
+	});
+	$('#adsub').click(function(){
+		if($('#aduser').val()!='admin'||$('#adpass').val()!='admin')
+			alert("Wrong User Name or Password!!!");
+		else
+			{
+			$('#adinp').hide();
+			$('#adtab').show();
+			$.ajax({
+	    		
+		   		 url: "RunQuery",
+		   			type: "Post",
+		   			data : {
+		   				x : "select * from book_table where fname is not null order by fname,lname"
+		   			},
+		   			dataType :'json',
+		   			complete : 
+		   				function(result){
+		   				
+		   				var x='<tr><th>Date</th><th>Time</th><th>Table Number</th><th>First Name</th><th>Last Name</th><th>e-mail</th><th>Contact</th></tr>'; Date
+		   				$.each(result.responseJSON,function(i){
+		   					x+='<tr><td>'+result.responseJSON[i].a[0].substr(0,10)+'</td>';
+		   					if(result.responseJSON[i].a[1]<12)
+		   						x+='<td>'+result.responseJSON[i].a[1]+' am</td>';
+		   					else
+		   						x+='<td>'+result.responseJSON[i].a[1]-12+' pm</td>';
+		   					for(j=2;j<7;j++)
+		   						x+='<td>'+result.responseJSON[i].a[j]+'</td>';
+		   					
+		   					x+='</tr>';
+		   				});
+		   				$('#adtab').empty();
+		   				$('#adtab').append(x);
+		   			
+		   			}
+				});
+			
+			}
+	});
+    
+    
+    
+  } );
+  
+  
+  function seltable(i)
+  {
+	  $('#img'+i).attr('src','images/bluetable.svg');
+	  $('#img'+i).attr('onclick','deseltable('+i+')');
+	  sel.push(i);
+	  showsel();
+	  
+  }
+  function deseltable(i)
+  {
+	  $('#img'+i).attr('src','images/greentable.svg');
+	  $('#img'+i).attr('onclick','seltable('+i+')');
+	  var index=sel.indexOf(i);
+	  console.log(index);
+	  sel.splice(index,1);
+	  console.log(sel);
+	  showsel();
+  }
+  function showsel()
+  {
+	  $('#shores').empty();
+	  $('#book').hide();
+	  var x;
+	  if(sel.length!=0){
+		  
+	  		if(sel.length==1)
+		  		x="You have selected "+sel.length+" table";
+	  		else
+		  		x="You have selected "+sel.length+" tables";
+		  	$('#shores').append(x);  
+			$('#book').show();
+	  }
+	  
+	  
+  }
+  
+  function clr()
+  {
+	  $("#regpage").hide();
+	  $("#bookpage").show();
+	  var date=$( "#datepicker" ).val();
+  	  var time=$( "#timepicker").val();
+	  $('#btable').hide();
+	  $('#book').hide();
+	  $('#shores').empty();
+	  if(date==""||time=='--Select--')
+	  	$('#avail').hide();
+	  else
+		$('#avail').show();  
+	  sel=[];
+	  
+  }
+  function avail()
+  {
+	  var date=$( "#datepicker" ).val();
+  	var time=$( "#timepicker").val();
+  	if(date=="")
+  		alert('Date should be selected');
+  	else if(time=='--Select--')
+  		{
+  		alert('Time should be selected');
+  		}
+  	else
+  		{
+  	 $.ajax({
+  		 url: "AVAIL",
+  			type: "Get",
+  			data : {
+  				date : date,
+  				time : time
+  			},
+  			dataType :'json',
+  			complete : 
+  				function(result){
+  				j=0;
+  			var x="<table>";
+  			for(i=1;i<9;i++)
+  				{
+  				if(i%4==1)
+  				x+='<tr>';
+  				x+='<td><img src="images/';
+  				if(i==result.responseJSON[j])
+  					{
+  					x+='redtable.svg"></td>';
+  					if(j<result.responseJSON.length)
+  					j++;
+  					}
+  				else
+  					x+='greentable.svg" id="img'+i+'" onclick="seltable('+i+')"></td>';
+  				if(i%4==0)
+  					x+='</tr>';
+  				}
+  			x+='</table>';
+  			$('#btable').empty();
+  			$('#btable').append(x);
+  			$('#btable').show();
+  			
+  			
+  			
+  			}
+  	 
+  	 });
+  		}
+  	
+  }
+  </script>
+</head>
+<body>
+<p id="titl">Hotel ABC</p>  
+<div id="bookpage"> 
+
+<p id="datetext">Date : </p><input type="text" id="datepicker">
+
+ <p id="timetext">Time :</p>
+ <select id="timepicker"><option>--Select--</option><option value=10>10 am - 11 am</option><option value=11>11 am - 12 pm</option><option value=12>12 pm - 01 pm</option><option value=13>01 pm - 02 pm</option><option value=14>02 pm - 03 pm</option><option value=15>03 pm - 04 pm</option><option value=16>04 pm - 05 pm</option></select>
+ 
+ <input type="button" value="Book" id="book"/>
+ 
+ <input type="button" value="Check Availability" id="avail">
+ <div id="btable"></div>
+ <div id="shores"></div>
+ </div>
+ 
+ <div id="regpage">
+ <div id="regtable">
+ <p id="fnametext">first name : </p><input type="text" id="fname">
+ <p id="lnametext">last name : </p><input type="text" id="lname">
+ <p id="emailtext">email : </p><input type="text" id="email">
+ <p id="mobtext">Mobile : </p><input type="text" id="mob">
+ <p id="pintext">PIN Code : </p><input type="text" id="pin">
+ <p id="aadhartext">Aadhar : </p><input type="text" id="aadhar">
+ <input type="button" value="Submit" id="reg">
+ </div>
+ </div>
+ <input type="button" id="admin" value="Admin"/>
+ <div id="addiv">
+ <div id="adinp">
+ <input type="text" id="aduser">
+ <input type="password" id="adpass">
+ <input type="button" id="adsub" value="Submit">
+ </div>
+ <table id="adtab"></table>
+ </div>
+</body>
+</html>

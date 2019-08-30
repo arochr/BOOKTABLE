@@ -1,0 +1,17 @@
+#admin
+{
+	position: absolute;
+    top: 10px;
+    right: 55px;
+        background: #3486c1;
+    font-size: 20px;
+    color: white;
+    border-radius: 32px;
+    width: 140px;
+    height: 42px;
+    border: 1px black;
+    font-family: inherit;
+    opacity: 0.98;
+
+}
+    
